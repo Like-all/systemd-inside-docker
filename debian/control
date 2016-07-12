@@ -1,15 +1,12 @@
 Source: systemd-inside-docker
-Section: unknown
+Section: admin
 Priority: optional
 Maintainer: Azer Abdullaev (Like All) <like-all@yandex.com>
 Build-Depends: debhelper (>= 9)
 Standards-Version: 3.9.5
-Homepage: <insert the upstream URL, if relevant>
-#Vcs-Git: git://anonscm.debian.org/collab-maint/systemd-inside-docker.git
-#Vcs-Browser: http://anonscm.debian.org/?p=collab-maint/systemd-inside-docker.git;a=summary
+Homepage: https://github.com/Like-all/systemd-inside-docker
 
 Package: systemd-inside-docker
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Description: Make it possible to run systemd inside Docker containers

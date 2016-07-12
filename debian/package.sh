@@ -1,0 +1,6 @@
+NAME="systemd-inside-docker"
+PRODUCTION_FLAVOURS="jessie
+xenial"
+PRODUCTION_ARCHITECTURES="any"
+TESTING_FLAVOURS="jessie"
+TESTING_ARCHITECTURES="amd64"
