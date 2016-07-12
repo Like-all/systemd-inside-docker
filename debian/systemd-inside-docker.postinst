@@ -4,7 +4,7 @@ current_directory="/opt/systemd-inside-docker/lib/systemd/system/sysinit.target.
 mkdir -p $current_directory
 cd /lib/systemd/system/sysinit.target.wants/ && \
     for i in *; do
-        test "$i" == "systemd-tmpfiles-setup.service" || mv $i $current_directory
+        test "$i" = "systemd-tmpfiles-setup.service" || mv $i $current_directory
     done
 
 current_directory="/opt/systemd-inside-docker/lib/systemd/system/multi-user.target.wants"
