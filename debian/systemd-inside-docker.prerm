@@ -1,0 +1,14 @@
+#!/bin/sh
+
+mv /opt/systemd-inside-docker/lib/systemd/system/sysinit.target.wants/* /lib/systemd/system/sysinit.target.wants/
+mv /opt/systemd-inside-docker/lib/systemd/system/multi-user.target.wants/* /lib/systemd/system/multi-user.target.wants/
+
+for i in /opt/systemd-inside-docker/etc/systemd/system/*.wants; do
+    mv $i/* `echo $i | sed 's|/opt/systemd-inside-docker||'`
+done
+
+mv /opt/systemd-inside-docker/lib/systemd/system/local-fs.target.wants/* /lib/systemd/system/local-fs.target.wants
+mv /opt/systemd-inside-docker/lib/systemd/system/sockets.target.wants/* /lib/systemd/system/sockets.target.wants
+mv /opt/systemd-inside-docker/lib/systemd/system/basic.target.wants/* /lib/systemd/system/basic.target.wants
+
+rm -fr /opt/systemd-inside-docker
