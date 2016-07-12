@@ -1,8 +1,14 @@
-systemd-inside-docker (0.1-2) UNRELEASED; urgency=medium
+systemd-inside-docker (0.1-3) UNRELEASED; urgency=medium
+
+  * No basic target
+
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Tue, 12 Jul 2016 23:42:56 +0300
+
+systemd-inside-docker (0.1-2) unstable; urgency=medium
 
   * First build
 
- -- Azer Abdullaev (Like All) <like-all@yandex.com>  Tue, 12 Jul 2016 23:20:53 +0300
+ -- Azer Abdullaev (Like All) <like-all@yandex.com>  Tue, 12 Jul 2016 23:42:54 +0300
 
 systemd-inside-docker (0.1-1) unstable; urgency=low
 

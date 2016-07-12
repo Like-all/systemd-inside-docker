@@ -7,6 +7,6 @@ Standards-Version: 3.9.5
 Homepage: https://github.com/Like-all/systemd-inside-docker
 
 Package: systemd-inside-docker
-Architecture: any
+Architecture: all
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: Make it possible to run systemd inside Docker containers

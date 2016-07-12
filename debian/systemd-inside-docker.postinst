@@ -4,7 +4,7 @@ current_directory="/opt/systemd-inside-docker/lib/systemd/system/sysinit.target.
 mkdir -p $current_directory
 cd /lib/systemd/system/sysinit.target.wants/ && \
     for i in *; do
-        test $i == systemd-tmpfiles-setup.service || mv $i $current_directory
+        test "$i" == "systemd-tmpfiles-setup.service" || mv $i $current_directory
     done
 
 current_directory="/opt/systemd-inside-docker/lib/systemd/system/multi-user.target.wants"
@@ -25,7 +25,3 @@ current_directory="/opt/systemd-inside-docker/lib/systemd/system/sockets.target.
 mkdir -p $current_directory
 mv /lib/systemd/system/sockets.target.wants/*udev* $current_directory
 mv /lib/systemd/system/sockets.target.wants/*initctl* $current_directory
-
-current_directory="/opt/systemd-inside-docker/lib/systemd/system/basic.target.wants"
-mkdir -p $current_directory
-mv /lib/systemd/system/basic.target.wants/* $current_directory
